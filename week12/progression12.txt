@@ -1,0 +1,12 @@
+สิ่งที่ฉันได้เรียนรู้ : 
+1.ใช้ res.ok หรือ res.status เพื่อตรวจสอบว่าสำเร็จหรือไม่ เช่น status 200 = สำเร็จ, 404 = ไม่พบ
+2.ใช้ res.json() เพื่อแปลง JSON response เป็น JavaScript object
+3.ใช้ JSON.stringify() เพื่อแปลง JavaScript object เป็น JSON string ก่อนส่งไป backend
+4.ต้องระบุ Content-Type: application/json ใน headers เมื่อส่งข้อมูล
+5.ใช้ hidden input (quoteId) เพื่อเก็บ ID ของ quote ที่กำลังแก้ไข แยกแยะระหว่าง Add และ Edit
+6.ถ้า quoteId มีค่า จะอยู่ใน Edit จะส่ง PUT request เพื่ออัปเดต
+7.ถ้า quoteId ว่าง จะอยู่ใน Add จะส่ง POST request เพื่อเพิ่มใหม่
+8.หลัง submit สำเร็จ ต้องล้างฟอร์ม (clear form values) เพื่อเตรียมพร้อมสำหรับการเพิ่ม quote ใหม่ โดยใช้
+    formEle.quoteId.value = ""
+    formEle.content.value = "" 
+    formEle.author.value = "" 
