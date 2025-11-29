@@ -128,13 +128,10 @@ import {
         alert(`App [Add]: ${e.message}`) 
       }
     }
-  
     //3. clear form
     formEle.quoteId.value = ""
     formEle.content.value = "" 
     formEle.author.value = "" 
-  
-    //ADD
   }
   //create html quote cards
   //   <div class="quote-card" data-id="1">

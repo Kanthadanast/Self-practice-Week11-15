@@ -1,0 +1,4 @@
+สิ่งที่ฉันได้เรียนรู้ : 
+code นี้มาจาก integrated project โดยเป็นการสร้าง function showDialog จะมีการรับ message, status 
+ถ้า กด cancel จะ return true และ ถ้ากด keep จะ return false
+ถ้า status อื่น return จะเป็น true 
