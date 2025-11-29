@@ -1,0 +1,9 @@
+สิ่งที่ฉันได้เรียนรู้ :
+code นี้มาจาก integrated project โดย code ดึงมาจาก getDeclarePlan (เรียก API) และ timeFormat (จัดรูปแบบเวลา) แล้วเลือก element ชื่อเต็มผู้ใช้จาก DOM (fullNameDom)
+1.function fetchStudyDecalred(kc, studentId) ถ้ามี fullNameDom จะเติมชื่อจาก kc.tokenParsed.name
+เรียก API ที่ api/v1/students/{studentId}/declared-plan ด้วย getDeclarePlan แล้ว return data ที่ได้
+ถ้าเกิดข้อผิดพลาดและ status === 404 จะ return null อื่น ๆ จะ error
+2.function showDeclared(data) เลือก element สำหรับแสดงสถานะและปุ่ม (declare, change, cancel)
+ถ้า data.status === "DECLARED" -> ใช้ timeFormat แปลงเวลาแล้วแสดงข้อความ "Declared ...", ซ่อนปุ่ม declare และแสดงปุ่ม change กับ cancel แล้ว return declareText
+ถ้า data.status === "CANCELLED" -> แสดงข้อความ "Cancelled ...", แสดงปุ่ม declare และซ่อนปุ่มอื่น ๆ
+ถ้าไม่มีข้อมูล -> แสดง "Not Declared" และปรับสถานะปุ่มให้แสดงเฉพาะปุ่ม declare
